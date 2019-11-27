@@ -1,0 +1,22 @@
+---
+version: 1.0
+
+unit_tests: []
+
+build:
+- npm i
+- make build
+
+api_gateway:
+- service:
+      name: helloworld
+      protocol: http
+  endpoints:
+    - path: /api/v1/helloworld
+      hosts:
+        internal:
+        - helloworld
+      methods: [GET]
+      access:
+        public: false
+        anonymous: true
