@@ -4,8 +4,7 @@ version: 1.0
 unit_tests: []
 
 build:
-- npm i
-- make build
+- echo "No build required. Everything is in Dockerfile"
 
 api_gateway:
 - service:
